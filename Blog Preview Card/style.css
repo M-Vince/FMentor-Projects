@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: 'Figtree';
 }
 
 body {
@@ -11,6 +11,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
 }
 
 .container {
@@ -23,9 +24,9 @@ body {
   height: 100%;
   margin: 10rem;
   padding: 1rem;
-  border: 2px solid black;
-  border-radius: 16px;
-  box-shadow: 10px 10px black;
+  border: 1px solid black;
+  border-radius: 18px;
+  box-shadow: 8px 8px black;
 
   display: flex;
   flex-direction: column;
@@ -33,23 +34,26 @@ body {
   align-items: flex-start;
   /* flex-basis: 1; */
 
-  transition: transform .2s ease-in-out;
+  /* transition: transform .2s ease-in-out; */
 
 }
 
-.container:hover {
+/* .container:hover {
   transform:  scale(1.01);
+} */
 
-}
-
-.card-pic {
+/* .card-pic {
   width: 100%;
   height: 150px;
-  /* margin: 0.7rem; */
-
+  margin: 0.7rem;
   border: 2px solid black;
-  border-radius: 8px;
+} */
 
+.card-pic .pic {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 8px;
 }
 
 .category {
@@ -65,16 +69,17 @@ body {
 .published {
   margin-top: 0.5rem;
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .title {
   margin: 0.8rem 0;
-  font-size: large;
+  font-weight: 800;
 }
 
 .title:hover {
   color: #e3c148;
+  cursor: pointer;
 }
 
 .description {
@@ -92,7 +97,6 @@ body {
 }
 
 .author .small-pic {
-  border: 2px solid black;
   border-radius: 24px;
   width: 30px;
   height: 30px;
@@ -102,7 +106,7 @@ body {
 
 .author .author-name {
   font-weight: bold;
-  font-size: 0.8rem;
+  font-weight: 800;
 }
 
 @media (max-width: 768px) {
@@ -112,7 +116,15 @@ body {
 }
 
 @media (max-width: 375px) {
- 
+  .container {
+    min-width: 19rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    min-width: 17.5rem;
+  }
 }
 
 
